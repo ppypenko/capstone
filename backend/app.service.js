@@ -52,7 +52,7 @@ exports.getAccountInfo = function (user) {
 
 exports.getItemListInfo = function (user) {
     var deferred = Q.defer();
-    ITEM.getAllItems(user).then(function (items) {
+    ITEM.getAllItemsOfUser(user).then(function (items) {
         ADDRESS.getAllAddresses(user).then(function (addresses) {
             if (items && addresses) {
                 deferred.resolve({
