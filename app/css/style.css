@@ -1,0 +1,195 @@
+.default-primary-color {
+    background-color: #FF9800;
+}
+
+.light-primary-color {
+    background: #77f;
+}
+
+.text-primary-color {
+    color: #212121;
+}
+
+.accent-color {
+    background-color: #448AFF;
+}
+
+.secondary-text-color {
+    color: #757575;
+}
+
+.divider-color {
+    border-color: #BDBDBD;
+}
+
+.header {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.main {
+    background-color: lightgrey;
+}
+
+.interface {
+    padding: 5px;
+}
+
+.form {
+    top: 20%;
+    margin: auto;
+    width: 360px;
+    min-width: 240px;
+}
+
+.container {
+    width: 100%;
+}
+
+.form-child {
+    width: 100%;
+    margin: auto;
+}
+
+.label {
+    width: 100%;
+    text-align: center;
+}
+
+body {
+    width: 80%;
+    min-width: 360px;
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 10px;
+    border-width: 0px;
+    height: 100%;
+    overflow: hidden;
+}
+
+button {
+    background-color: #688297;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+html {
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: white;
+    height: 100%;
+}
+
+.notAuth {
+    color: red;
+}
+
+.form-field-full {
+    width: 100%;
+}
+
+.form-field-half {
+    width: 49%;
+}
+
+.left {
+    position: relative;
+    float: left;
+}
+
+.right {
+    position: relative;
+    float: right;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+.form-control {
+    height: 24px;
+    width: 99%;
+    border-radius: 5px;
+}
+
+.form-btn {
+    width: 100%;
+}
+
+input,
+button {
+    margin: 2px;
+}
+
+.popup {
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-left: -200px;
+    margin-top: -200px;
+}
+
+button {
+    background-color:
+}
+
+.form-container {
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
+    padding: 5px;
+}
+
+nav {
+    height: auto;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#cred {
+    float: right;
+}
+
+#menu {
+    float: left;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.half {
+    width: 44.99999%;
+}
+
+.listitem {
+    background-color: lightblue;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+
+/*
+@media screen and (max-width: 600px) {
+    body {
+        background-color: aqua
+    }
+}*/

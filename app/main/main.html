@@ -1,0 +1,38 @@
+<div>
+    <div class="form-container">
+        <div class="form-field-full">
+            <label for="keyword">Category</label>
+            <select class="form-control" id="indexlist" ng-model="category" ng-options="option as option for option in options track by option">
+            </select>
+            <input class="form-control" type="text" ng-model="keyword" placeholder="Search">
+        </div>
+        <div class="form-field-full">
+            <button class="form-btn" ng-click="search()">Search</button>
+        </div>
+        <div class="form-field-half left">
+            <label for="minprice">Min Price</label>
+            <input class="form-control" type="number" ng-model="minprice">
+        </div>
+        <div class="form-field-half right">
+            <label for="maxprice">Max Price</label>
+            <input class="form-control" type="number" ng-model="maxprice">
+        </div>
+    </div>
+    <div ng-bind-html="err" ng-class="notAuth"></div>
+    <div ng-hide="!confirm" ng-model="msg"></div>
+    <div id="searchResults">
+        <div class="listitem" ng-repeat="(index1, code) in results.ids">
+            <input type="text" value="" placeholder="Enter title" ng-model="titles[index1]" />
+            <input type="number" value="" placeholder="10.00" ng-model="prices[index1]" />
+            <!--            <input type="checkbox" ng-model="bots[index1]" />Use Bot?-->
+            <!--            <input type="number" value="" placeholder="Amount" ng-model="amounts[index1]" ng-show="bots[index1]" />-->
+            <button ng-click="add(index1)">Add to List</button>
+            <div ng-repeat="store in results.items">
+                <div ng-if="store[index1]">
+                    <h5>{{store[index1].business}} Price: {{store[index1].price}} (as of {{date}})</h5>
+                    <a href="{{store[index1].link}}" target="_blank">{{store[index1].title}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <title>Price Bot Online</title>
+    <link rel="shortcut icon" href="">
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-cookies.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-sanitize.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEg-xRl_n-xqGbyyPIcOhUXPUX24Xowfk&libraries=places" async defer></script>
+</head>
+
+<body>
+
+    <div class="main">
+        <div>
+            <h1 class="header light-primary-color">Price Bot Online</h1>
+            <h4 class="header">{{webtitle}}</h4>
+        </div>
+        <nav>
+            <div id="menu">
+                <a ng-hide="page === '/'" href="#/">Home</a>
+                <a ng-hide="page === '/list'" href="#list" ng-if="logd">My List</a>
+                <a ng-hide="page === '/account'" href="#account" ng-if="logd">Account</a>
+                <a ng-hide="page === '/faq'" href="#faq">faq</a>
+                <a ng-hide="page === '/terms'" href="#terms">terms</a>
+            </div>
+            <div id="cred">
+                <div ng-if="logd">{{username}}</div>
+                <a ng-if="logd" href="#logout">Logout</a>
+                <a ng-if="!logd" ng-hide="page === '/login' || page === '/register'" href="#login">login</a>
+                <a ng-if="!logd" ng-hide="page === '/register' || page === '/login'" href="#register">register</a>
+            </div>
+        </nav>
+
+        <div class="interface" ng-view></div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="account/account.controller.js"></script>
+    <script src="faq/faq.controller.js"></script>
+    <script src="list/list.controller.js"></script>
+    <script src="login/login.controller.js"></script>
+    <script src="login/logout.controller.js"></script>
+    <script src="main/main.controller.js"></script>
+    <script src="register/register.controller.js"></script>
+    <script src="services/app.service.js"></script>
+    <script src="services/user.service.js"></script>
+    <script src="services/config.service.js"></script>
+    <script src="services/auth.service.js"></script>
+    <script src="terms/terms.controller.js"></script>
+    <script src="forgot/forgot.controller.js"></script>
+    <script src="confirm/email.controller.js"></script>
+    <script src="confirm/phone.controller.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<div class="container">
+    <div ng-bind-html="err" ng-class="notAuth"></div>
+    <div>
+        <div ng-repeat="(index, item) in items">
+            <p><span>Product title: {{item.title}}</span> <span>Price wanted: {{item.price}}</span>
+                <button ng-click="editItem(index)">edit</button>
+                <button ng-click="deleteItem(index)">delete</button>
+            </p>
+        </div>
+    </div>
+    <div ng-hide="!showEdit" class="popup">
+        <label>Product Title: </label>
+        <input class="form-control" type="text" ng-model="itemform.title" />
+        <label>Product Price: </label>
+        <input class="form-control" type="text" ng-model="itemform.price" />
+        <button class="form-btn form-field-half left" ng-click="saveItem()">Save</button>
+        <button class="form-btn form-field-half right" ng-click="cancel()">Cancel</button>
+    </div>
+    <div ng-hide="!confirm" ng-model="msg"></div>
+</div>

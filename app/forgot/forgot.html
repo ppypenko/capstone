@@ -1,0 +1,9 @@
+<div>
+    <div class="form-field-full">
+        <div accesskey="" class="notAuth" ng-bind-html="err"></div>
+        <label for="email">Notify by:</label>
+        <select class="form-control" ng-model="notifyby" ng-options="option as option for option in options track by option"></select>
+        <input class="form-control" ng-model="input" type="text" required placeholder="Enter Name/Email/Phone" />
+        <button class="form-btn" ng-click="sendForgot()">Send</button>
+    </div>
+</div>

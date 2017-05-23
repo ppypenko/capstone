@@ -1,0 +1,108 @@
+<div>
+    <div class="form-field-full">
+        <div ng-bind-html="err" ng-class="notAuth"></div>
+        <div>
+
+            <!--
+<div>
+    <label>User Name</label>
+    <div ng-model="user.name"></div>
+</div>
+-->
+            <!--
+            <div>
+    <label>First Name</label>
+    <input ng-readonly="locked" type="text" ng-model="user.firstname">
+    <label>Last Name</label>
+    <input ng-readonly="locked" type="text" ng-model="user.lastname">
+</div>
+-->
+            <div>
+                <label>User Email</label>
+                <input ng-readonly="locked" type="text" ng-model="user.email.address" ng-class="{'notAuth': !user.email.auth}" />
+                <button ng-hide="user.email.auth || user.email.address === ''" ng-click="confirmEmail()">Confirm Email</button>
+            </div>
+            <div>
+                <label>User Phone</label>
+                <input ng-readonly="locked" type="text" ng-model="user.phone.address" ng-class="{'notAuth': !user.phone.auth}" />
+                <button ng-hide="user.phone.auth || user.phone.address === '' && !user.phone.auth" ng-click="confirmPhone()">Confirm Phone</button>
+            </div>
+            <button class="form-btn" ng-click="editUser()" ng-hide="!locked">Edit</button>
+            <button class="form-btn" ng-click="updateUser()" ng-hide="locked">Save</button>
+            <button class="form-btn" ng-hide="locked" ng-click="clearEdit()">Cancel</button>
+            <!--
+            <div>
+                <label>Paypal</label>
+                <div id="paypal">
+                    <div>
+                        <label>Email</label>
+                        <input ng-readonly="locked" type="text" ng-model="user.paypal.email" />
+                    </div>
+                    <div>
+                        <label>Token</label>
+                        <input ng-readonly="locked" type="text" ng-model="user.paypal.token" />
+                    </div>
+                </div>
+            </div>
+-->
+        </div>
+        <!--
+        <div id="addressDiv">
+    <label for="address">User Address(es)</label>
+    <button ng-click="newAddress()">Add Address</button>
+    <div ng-hide="!popupAddressForm" class="popup">
+        <div ng-model="formErr"></div>
+        <div>
+            <table id="address">
+                <tr>
+                    <td>
+                        <label>Home Address</label>
+                        <input type="text" ng-model="formAddress.homeaddress" placeholder="Street Number + apartment, suite, unit, building, floor, etc">
+                    </td>
+                    <td>
+                        <label>Street Address</label>
+                        <input type="text" ng-model="formAddress.streetaddress" placeholder="Street address, PO box, company name, c/o">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>City</label>
+                        <input type="text" ng-model="formAddress.city" placeholder="city" />
+                    </td>
+                    <td>
+                        <label>State</label>
+                        <input type="text" ng-model="formAddress.state" placeholder="Ex: utah, UT, ut" />
+                    </td>
+                    <td>
+                        <label>Zip Code</label>
+                        <input type="text" ng-model="formAddress.zip" />
+                    </td>
+                </tr>
+            </table>
+            <input type="hidden" ng-model="formAddress._id">
+            <button ng-click="saveAddress()">Save</button>
+            <button ng-click="popupAddressForm = false">Cancel</button>
+        </div>
+    </div>
+    <div id="addresses">
+        <div ng-repeat="(index, address) in addresses">
+            <div class="addrBox">
+                <p><span>{{address.firstname}}</span><span>{{address.lastname}}</span></p>
+                <p>{{address.homeaddress}}</p>
+                <p>{{address.streetaddress}}</p>
+                <p><span>{{address.city}}</span>, <span>{{address.state}}</span> <span>{{address.zip}}</span></p>
+            </div>
+            <button ng-click="editAddress(index)">Edit</button>
+            <button ng-click="deleteAddress(index)">Delete</button>
+        </div>
+    </div>
+</div>
+-->
+        <button class="form-btn" ng-click="popupDelete = true">Delete Account</button>
+        <div ng-hide="!popupDelete" class="popup">
+            <h4>By selecting "Yes". You agree to having your account and any information connected with it permanetly deleted. To use this app fully in the future will require you to make a new account.</h4>
+            <button class="form-btn form-field-half left" ng-click="deleteAccount()">Yes</button>
+            <button class="form-btn form-field-half right" ng-click="popupDelete = false">No</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="form-field-full">
+        <div>Please check your text messages. If you do not recieve it in 1 miunute please resend the text.</div>
+        <div ng-bind-html="err" class="notAuth"></div>
+        <label>Confirm Phone</label>
+        <div ng-model="phone"></div>
+        <label>Enter Token</label>
+        <input class="form-control" type="text" id="phonetoken" ng-model="phonetoken" required/>
+        <button ng-click="confirmPhone()">Confirm</button>
+        <button class="form-btn" ng-click="sendPhone()">Resend Text</button>
+    </div>
+</div>

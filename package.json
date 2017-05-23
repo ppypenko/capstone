@@ -1,0 +1,37 @@
+{
+    "name": "pricebotonline",
+    "version": "1.0.0",
+    "description": "A price comparison and notification site",
+    "main": "app.js",
+    "dependencies": {
+        "amazon-product-api": "^0.4.2",
+        "body-parser": "^1.15.2",
+        "cheerio": "^0.22.0",
+        "cors": "^2.7.1",
+        "crypto": "^0.0.3",
+        "express": "^4.14.0",
+        "express-session": "^1.13.0",
+        "geocoder": "^0.2.2",
+        "helmet": "^2.1.1",
+        "jsonwebtoken": "^7.1.6",
+        "mongoose": "^4.5.2",
+        "nodemailer": "^2.5.0",
+        "q": "^1.4.1",
+        "request": "^2.75.0",
+        "twilio": "^2.11.0"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://gitlab.com/ppypenko/site1.git"
+    },
+    "author": "Pyotr Pypenko",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://gitlab.com/ppypenko/site1/issues"
+    },
+    "homepage": "https://gitlab.com/ppypenko/site1#README"
+}

@@ -1,0 +1,8 @@
+{
+    "connection": "mongodb://localhost:27017",
+    "proxy": "http://localhost:8080",
+    "secret": "S3<r3TW3zz@G3",
+    "emailRegex": "[^A-Z]+@[a-z0-9]+.[a-z]{2,}",
+    "passwordRegex": "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@!#$^%&*+/=?-])(?=.{10,})",
+    "password": "abcdefghijklmnopqrstuvwxyz@!#$^%&*+/=?-ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+}

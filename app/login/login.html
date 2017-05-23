@@ -1,0 +1,18 @@
+<div>
+    <div class="form-field-full">
+        <div ng-bind-html="err" ng-class="notAuth"></div>
+        <div class="form-field-full">
+            <label for="name">Enter User Name</label>
+            <input class="form-control" type="text" ng-model="name" required/>
+        </div>
+        <div class="form-field-full">
+            <label for="password">Enter User Password</label>
+            <input class="form-control" type="password" ng-model="password" required/>
+        </div>
+        <button class="form-btn" ng-click="login()">Login</button>
+    </div>
+    <div class="form-field-full">
+        <a href="#forgot">Forgot Name or Password?</a>
+        <a href="#register">Register</a>
+    </div>
+</div>

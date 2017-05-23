@@ -1,0 +1,12 @@
+<div>
+    <div class="form-field-full">
+        <div>Please check your email. If it is not in your inbox, check your spam folder. If more than 1 minute has passed resend the email.</div>
+        <div ng-bind-html="err" class="notAuth"></div>
+        <label>Confirm Email</label>
+        <div ng-model="email"></div>
+        <label>Enter Token</label>
+        <input class="form-control" type="text" ng-model="emailtoken" placeholder="token" required/>
+        <button class="form-btn" ng-click="confirmEmail()">Confirm</button>
+        <button class="form-btn" ng-click="sendEmail()">Resend Email</button>
+    </div>
+</div>

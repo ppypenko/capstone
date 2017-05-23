@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="form-group">
+        <div ng-bind-html="err" ng-class="notAuth"></div>
+        <div>
+            <label>Enter User Name</label>
+            <input class="form-control" type="text" ng-model="user.name" required/>
+            <label>Enter Email</label>
+            <input class="form-control" type="text" ng-model="user.email" required/>
+            <label>Enter Password</label>
+            <input class="form-control" type="text" ng-model="user.password" required/>
+            <label>Confirm Password</label>
+            <input class="form-control" type="text" ng-model="user.confirm" required/>
+            <a href="#terms">terms</a>
+            <input type="checkbox" ng-model="terms" required/>I agree to these terms and conditions.
+            <button class="form-btn" ng-click="register()">Register</button>or
+            <a href="#login">login</a>
+        </div>
+    </div>
+</div>
